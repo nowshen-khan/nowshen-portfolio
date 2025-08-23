@@ -98,7 +98,7 @@ export default function Navbar() {
 						href="/nowshenCV.pdf"
 						target="_blank"
 						rel="noopener noreferrer"
-						className="px-4 py-2 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white dark:bg-indigo-500 dark:hover:bg-indigo-400 transition-colors duration-300"
+						className="px-4 py-2 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white dark:bg-indigo-500 dark:hover:bg-indigo-400  duration-300"
 					>
 						Download CV
 					</a>

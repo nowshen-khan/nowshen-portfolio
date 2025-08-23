@@ -140,7 +140,7 @@ export default function ProjectSection({ id }) {
 					{projectsToShow.map((project) => (
 						<div
 							key={project.id}
-							className={`rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-105 dark:bg-gray-800 bg-white`}
+							className={`relative rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-105 dark:bg-gray-800 bg-white`}
 						>
 							{/* Coming Soon Ribbon */}
 							{project.status === "coming-soon" && (
