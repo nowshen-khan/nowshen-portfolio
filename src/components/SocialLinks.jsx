@@ -15,6 +15,10 @@ const SocialLinks = ({ id, className }) => {
 			icon: <IoMdMail />,
 			href: "mailto:contact@nowshen.com",
 		},
+		{
+			icon: <IoMdMail />,
+			href: "mailto:nowshen.anjum@gmail.com",
+		},
 	];
 	return (
 		<div id={id} className={className}>

@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 export default function Navbar() {
 	const menuItems = [
 		{ label: "About", href: "about" },
+		{ label: "Services", href: "services" },
 		{ label: "Projects", href: "projects" },
 		{ label: "Testimonials", href: "testimonials" },
 		{ label: "Contact", href: "contact" },
