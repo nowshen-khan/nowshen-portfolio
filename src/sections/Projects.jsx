@@ -71,7 +71,7 @@ const allProjects = [
 		title: "Portfolio Website",
 		description:
 			"Responsive portfolio with dark mode, project showcase, and contact form.",
-		technologies: ["React", "Tailwind CSS", "EmailJS", "Framer Motion"],
+		technologies: ["React", "Tailwind CSS", "Formspree", "Framer Motion"],
 		category: "Web",
 		image: "/images/portfolio-project-about.png",
 		githubUrl: "https://github.com/nowshen-khan/nowshen-portfolio",

@@ -6,14 +6,14 @@ Personal portfolio website of **Nowshen Anjuman Khan** – Fullstack Developer.
 
 - Responsive design (Mobile/Desktop)
 - Dark/Light mode toggle
-- Hero, About, Skills, Projects, Certificates sections
+- Hero, About, Skills, Services, Projects, Certificates sections
 - Get in Touch form integrated with Formspree
 - Smooth scroll navigation
-- Tailwind CSS + React.js + Node.js
+- Tailwind CSS + React.js
 
 ## Live Demo
 
-[https://nowshen-portfolio.vercel.app](https://nowshen-portfolio.vercel.app)
+[https://nowshen.com](https://nowshen.com/)
 
 ## License
 
