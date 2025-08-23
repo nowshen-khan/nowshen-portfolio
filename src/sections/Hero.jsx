@@ -19,7 +19,7 @@ export default function Hero({ id }) {
 				{/* Right Image */}
 				<div className="md:w-1/3 md:mt-0 flex justify-center md:justify-items-center relative pt-10">
 					<Image
-						src="/photo.png"
+						src="/photos/profile.jpg"
 						alt="Nowshen Anjuman Khan"
 						height={300}
 						className="rounded-lg shadow-2xl  object-cover border-4 border-indigo-500 dark:border-indigo-400"

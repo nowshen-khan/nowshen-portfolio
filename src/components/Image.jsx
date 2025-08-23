@@ -5,49 +5,47 @@ export default function Image({
 	alt,
 	width,
 	height,
+	objectFit = "cover",
+	objectPosition = "center",
+	blurDataURL, // optional tiny base64 blurred image
 	className = "",
 	...props
 }) {
 	const [loaded, setLoaded] = useState(false);
 
+	const style = {
+		width: width ? `${width}px` : undefined,
+		maxWidth: width ? `${width}px` : undefined,
+		height: height ? `${height}px` : undefined,
+		maxHeight: height ? `${height}px` : undefined,
+		objectFit,
+		objectPosition,
+	};
+
 	return (
-		<div
-			style={{
-				position: "relative",
-				width: width ? `${width}px` : "auto",
-				height: height ? `${height}px` : "auto",
-				overflow: "hidden",
-			}}
-			className={className}
-		>
-			{/* Placeholder (blur effect before load) */}
-			{!loaded && (
-				<div
-					style={{
-						backgroundColor: "#e5e7eb", // light gray
-						width: "100%",
-						height: "100%",
-						position: "absolute",
-						top: 0,
-						left: 0,
-					}}
+		<div className={`relative overflow-hidden ${className}`} style={style}>
+			{/* Placeholder */}
+			{!loaded && blurDataURL ? (
+				<img
+					src={blurDataURL}
+					alt="placeholder"
+					className="absolute inset-0 w-full h-full object-cover filter blur-sm"
 				/>
+			) : (
+				!loaded && (
+					<div className="absolute inset-0 bg-gray-200 dark:bg-gray-700" />
+				)
 			)}
 
 			<img
 				src={src}
 				alt={alt}
-				width={width}
-				height={height}
-				loading="lazy" // lazy loading like Next.js
+				loading="lazy"
 				onLoad={() => setLoaded(true)}
-				style={{
-					display: "block",
-					width: width ? `${width}px` : "100%",
-					height: height ? `${height}px` : "auto",
-					transition: "opacity 0.3s ease-in-out",
-					opacity: loaded ? 1 : 0,
-				}}
+				className={`block w-full h-full transition-opacity duration-300 ${
+					loaded ? "opacity-100" : "opacity-0"
+				}`}
+				style={{ objectFit, objectPosition }}
 				{...props}
 			/>
 		</div>

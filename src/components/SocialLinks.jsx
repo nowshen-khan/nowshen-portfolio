@@ -8,16 +8,16 @@ const SocialLinks = ({ id, className }) => {
 			href: "https://github.com/nowshen-khan",
 		},
 		{
+			icon: <IoMdMail />,
+			href: "mailto:nowshen.anjum@gmail.com",
+		},
+		{
 			icon: <FaLinkedin />,
 			href: "https://www.linkedin.com/in/nowshen-khan/",
 		},
 		{
 			icon: <IoMdMail />,
 			href: "mailto:contact@nowshen.com",
-		},
-		{
-			icon: <IoMdMail />,
-			href: "mailto:nowshen.anjum@gmail.com",
 		},
 	];
 	return (
