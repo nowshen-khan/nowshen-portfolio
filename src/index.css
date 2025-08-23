@@ -36,7 +36,7 @@
 	}
 }
 :root {
-	--background: #ffffff;
+	--background: oklch(96.7% 0.003 264.542);
 	--foreground: #171717;
 }
 

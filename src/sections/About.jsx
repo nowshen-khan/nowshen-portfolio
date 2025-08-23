@@ -1,4 +1,5 @@
 // About.jsx
+import Image from "../components/Image";
 export default function About({ id }) {
 	return (
 		<section
@@ -7,10 +8,11 @@ export default function About({ id }) {
 		>
 			{/* Left side - Image */}
 			<div className="flex justify-center">
-				<img
-					src="/profile.jpeg"
-					alt="Profile"
-					className="w-64 h-64 rounded-2xl shadow-lg object-cover border-4 border-indigo-500 dark:border-indigo-400"
+				<Image
+					src="/nowshen.jpg"
+					alt="Photo of Nowshen Anjuman Khan"
+					width={400}
+					className=" rounded-2xl shadow-lg object-cover border-4 border-indigo-500 dark:border-indigo-400"
 				/>
 			</div>
 
