@@ -16,6 +16,7 @@ const allProjects = [
 		image: "/images/projects.png",
 		githubUrl: "#",
 		liveUrl: "#",
+		status: "coming-soon",
 	},
 	{
 		id: 2,
@@ -27,6 +28,7 @@ const allProjects = [
 		image: "/images/projects.png",
 		githubUrl: "#",
 		liveUrl: "#",
+		status: "coming-soon",
 	},
 	{
 		id: 3,
@@ -38,6 +40,7 @@ const allProjects = [
 		image: "/images/projects.png",
 		githubUrl: "#",
 		liveUrl: "#",
+		status: "coming-soon",
 	},
 	{
 		id: 4,
@@ -49,6 +52,7 @@ const allProjects = [
 		image: "/images/projects.png",
 		githubUrl: "#",
 		liveUrl: "#",
+		status: "coming-soon",
 	},
 	{
 		id: 5,
@@ -60,6 +64,7 @@ const allProjects = [
 		image: "/images/projects.png",
 		githubUrl: "#",
 		liveUrl: "#",
+		status: "coming-soon",
 	},
 	{
 		id: 6,
@@ -71,6 +76,7 @@ const allProjects = [
 		image: "/images/portfolio-project-about.png",
 		githubUrl: "https://github.com/nowshen-khan/nowshen-portfolio",
 		liveUrl: "#",
+		status: "live",
 	},
 	// More Project
 ];
@@ -136,12 +142,21 @@ export default function ProjectSection({ id }) {
 							key={project.id}
 							className={`rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-105 dark:bg-gray-800 bg-white`}
 						>
+							{/* Coming Soon Ribbon */}
+							{project.status === "coming-soon" && (
+								<div className="absolute top-3 right-0 bg-yellow-400 text-black px-3 py-1 rounded-l-lg font-semibold text-sm z-10">
+									Coming Soon
+								</div>
+							)}
+
+							{/* Project Image and Details */}
 							<div className="h-48 overflow-hidden flex items-center justify-center bg-gray-200 dark:bg-gray-700">
 								<span className="text-lg text-gray-500 dark:text-gray-300">
-									<Image src={project.image} />
+									<Image src={project.image} alt={project.title} />
 									{/* <img src={project.image} alt={project.title} /> */}
 								</span>
 							</div>
+
 							<div className="p-4">
 								<h3 className="text-lg font-bold mb-2">{project.title}</h3>
 								<p className="mb-4 text-gray-600 dark:text-gray-300">
@@ -162,7 +177,14 @@ export default function ProjectSection({ id }) {
 										href={project.githubUrl}
 										target="_blank"
 										rel="noopener noreferrer"
-										className="flex items-center px-4 py-2 rounded-lg transition-colors dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-white bg-gray-200 hover:bg-gray-300 text-gray-800"
+										className={`flex items-center px-4 py-2 rounded-lg transition-colors ${
+											project.status === "coming-soon"
+												? "bg-gray-400 text-gray-700 cursor-not-allowed"
+												: "dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-white bg-gray-200 hover:bg-gray-300 text-gray-800"
+										}`}
+										onClick={(e) =>
+											project.status === "coming-soon" && e.preventDefault()
+										}
 									>
 										<FaGithub size={18} className="mr-2" />
 										Code
@@ -171,7 +193,14 @@ export default function ProjectSection({ id }) {
 										href={project.liveUrl}
 										target="_blank"
 										rel="noopener noreferrer"
-										className="flex items-center px-4 py-2 rounded-lg transition-colors dark:bg-blue-600 dark:hover:bg-blue-500 dark:text-white bg-blue-500 hover:bg-blue-400 text-white"
+										className={`flex items-center px-4 py-2 rounded-lg transition-colors ${
+											project.status === "coming-soon"
+												? "bg-indigo-300 text-gray-700 cursor-not-allowed"
+												: "dark:bg-blue-600 dark:hover:bg-blue-500 dark:text-white bg-blue-500 hover:bg-blue-400 text-white"
+										}`}
+										onClick={(e) =>
+											project.status === "coming-soon" && e.preventDefault()
+										}
 									>
 										<ExternalLink size={18} className="mr-2" />
 										Live Demo

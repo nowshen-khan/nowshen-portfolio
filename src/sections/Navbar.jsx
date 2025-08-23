@@ -95,7 +95,7 @@ export default function Navbar() {
 
 					{/* Download CV */}
 					<a
-						href="/cv.pdf"
+						href="/nowshenCV.pdf"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="px-4 py-2 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white dark:bg-indigo-500 dark:hover:bg-indigo-400 transition-colors duration-300"

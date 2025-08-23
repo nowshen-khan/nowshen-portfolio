@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
+import { SiGmail } from "react-icons/si";
 
 const SocialLinks = ({ id, className }) => {
 	const socialLinks = [
@@ -7,13 +8,14 @@ const SocialLinks = ({ id, className }) => {
 			icon: <FaGithub />,
 			href: "https://github.com/nowshen-khan",
 		},
-		{
-			icon: <IoMdMail />,
-			href: "mailto:nowshen.anjum@gmail.com",
-		},
+
 		{
 			icon: <FaLinkedin />,
 			href: "https://www.linkedin.com/in/nowshen-khan/",
+		},
+		{
+			icon: <SiGmail />,
+			href: "mailto:nowshen.anjum@gmail.com",
 		},
 		{
 			icon: <IoMdMail />,

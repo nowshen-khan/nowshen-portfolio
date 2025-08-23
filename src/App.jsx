@@ -25,9 +25,9 @@ function App() {
 				<Experience id={"experience"} />
 				<hr />
 				<Certificates id={"certificates"} />
-
 				<Projects id={"projects"} />
-				<Testimonials id={"testimonials"} />
+				{/* <Testimonials id={"testimonials"} /> */}
+				<hr />
 				<GetInTouch id={"contact"} />
 				<Footer id={"footer"} />
 			</BrowserRouter>
