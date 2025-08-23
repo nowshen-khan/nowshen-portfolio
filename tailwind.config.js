@@ -5,8 +5,16 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				background: "var(--background)",
-				foreground: "var(--foreground)",
+				// Light mode colors
+				background: {
+					primary: "#ffffff",
+					secondary: "#f5f5f5",
+				},
+				foreground: {
+					primary: "#171717",
+					secondary: "#737373",
+				},
+				primary: "#3b82f6", // Your primary color for buttons, etc.
 			},
 		},
 	},

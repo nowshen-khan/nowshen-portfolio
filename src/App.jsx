@@ -17,10 +17,11 @@ function App() {
 		<ThemeProvider>
 			<BrowserRouter>
 				<Navbar />
-				<Hero />
+				<Hero id={"home"} />
 				<About id={"about"} />
-				<WhatICanDo id={"services"} />
 				<Skills id={"skills"} />
+				<WhatICanDo id={"services"} />
+
 				<Certificates id={"certificates"} />
 				<Experience id={"experience"} />
 				<Projects id={"projects"} />

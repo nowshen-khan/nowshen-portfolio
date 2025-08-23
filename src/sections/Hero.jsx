@@ -2,7 +2,7 @@ import Image from "./../components/Image";
 import { MapPin } from "lucide-react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
-export default function Hero() {
+export default function Hero({ id }) {
 	const socialLinks = [
 		{
 			icon: <FaGithub />,
@@ -26,10 +26,13 @@ export default function Hero() {
 	};
 
 	return (
-		<section className="text-foreground dark:text-foreground py-16 mt-10">
-			<div className="container mx-auto flex flex-col items-center justify-between px-6 md:px-6 md:flex-row-reverse">
+		<section
+			id={id}
+			className="text-foreground dark:text-foreground py-20 md:py-28"
+		>
+			<div className="container mx-auto flex flex-col items-center justify-between px-6 lg:px-12 md:flex-row-reverse">
 				{/* Right Image */}
-				<div className="md:w-1/3 md:mt-0 flex justify-center md:justify-items-center relative">
+				<div className="md:w-1/3 md:mt-0 flex justify-center md:justify-items-center relative pt-10">
 					<Image
 						src="/profile.jpeg"
 						alt="Nowshen Anjuman Khan"
@@ -50,7 +53,7 @@ export default function Hero() {
 						visually appealing, and responsive.
 					</p>
 
-					<div className="flex flex-row items-center space-x-4">
+					<div className="flex flex-wrap items-center gap-4">
 						<span className="flex items-center space-x-2">
 							<MapPin /> Gazipur, Bangladesh
 						</span>
@@ -76,7 +79,7 @@ export default function Hero() {
 								<a
 									href={link.href}
 									key={index}
-									className="hover:text-green-500 transition"
+									className="text-2xl hover:text-green-500 transition"
 									target="_blank"
 									rel="noopener noreferrer"
 								>

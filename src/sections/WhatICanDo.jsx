@@ -1,61 +1,65 @@
 import { Code, Globe, Layers, Smartphone } from "lucide-react";
 
-export default function WhatICanDo() {
+// Card data as array → DRY: avoids repeating same JSX for each card
+const services = [
+	{
+		icon: Code,
+		title: "Web Development",
+		desc: "Build fast, responsive websites using React, TailwindCSS, and the MERN stack.",
+	},
+	{
+		icon: Globe,
+		title: "Responsive Design",
+		desc: "Design layouts that adapt to any device, ensuring the best user experience.",
+	},
+	{
+		icon: Layers,
+		title: "Fullstack Apps",
+		desc: "Develop complete applications with frontend, backend, and database integration.",
+	},
+	{
+		icon: Smartphone,
+		title: "Landing Pages",
+		desc: "Create high-converting, professional landing pages for businesses.",
+	},
+];
+
+export default function WhatICanDo({ id }) {
 	return (
-		<section id="services" className="py-16 bg-gray-50 dark:bg-gray-900">
+		<section id={id} className="py-20 bg-gray-50 dark:bg-gray-900">
 			<div className="max-w-6xl mx-auto px-6 text-center">
-				<h2 className="text-3xl md:text-4xl font-bold mb-12 text-gray-800 dark:text-white">
+				{/* Section Title */}
+				<h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white">
 					What I Can Do
 				</h2>
 
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-					{/* Card 1 */}
-					<div className="p-6 rounded-2xl shadow-md bg-white dark:bg-gray-800 hover:shadow-xl transition">
-						<Code className="mx-auto mb-4 w-12 h-12 text-indigo-500" />
-						<h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
-							Web Development
-						</h3>
-						<p className="text-gray-600 dark:text-gray-300 text-sm">
-							Build modern, fast, and responsive websites using React,
-							TailwindCSS, and the MERN stack.
-						</p>
-					</div>
+				{/* Section subtitle/tagline */}
+				<p className="mt-3 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+					I build modern, scalable, and user-friendly digital solutions that
+					help businesses grow online.
+				</p>
 
-					{/* Card 2 */}
-					<div className="p-6 rounded-2xl shadow-md bg-white dark:bg-gray-800 hover:shadow-xl transition">
-						<Globe className="mx-auto mb-4 w-12 h-12 text-green-500" />
-						<h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
-							Responsive Design
-						</h3>
-						<p className="text-gray-600 dark:text-gray-300 text-sm">
-							Design mobile-friendly layouts that adapt perfectly to any device
-							for the best user experience.
-						</p>
-					</div>
+				{/* Grid container for cards */}
+				<div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+					{/* Map through services array → DRY: avoid repeating each card */}
+					{services.map(({ icon: Icon, title, desc }, index) => (
+						<div
+							key={index}
+							className="p-6 rounded-2xl shadow-md bg-white dark:bg-gray-800
+								hover:shadow-xl hover:-translate-y-2 transform transition duration-300"
+						>
+							{/* Card icon */}
+							<Icon className="mx-auto mb-4 w-12 h-12 text-indigo-500" />
 
-					{/* Card 3 */}
-					<div className="p-6 rounded-2xl shadow-md bg-white dark:bg-gray-800 hover:shadow-xl transition">
-						<Layers className="mx-auto mb-4 w-12 h-12 text-blue-500" />
-						<h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
-							Fullstack Apps
-						</h3>
-						<p className="text-gray-600 dark:text-gray-300 text-sm">
-							Develop full-featured applications with frontend, backend, and
-							database integration.
-						</p>
-					</div>
+							{/* Card title */}
+							<h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+								{title}
+							</h3>
 
-					{/* Card 4 */}
-					<div className="p-6 rounded-2xl shadow-md bg-white dark:bg-gray-800 hover:shadow-xl transition">
-						<Smartphone className="mx-auto mb-4 w-12 h-12 text-pink-500" />
-						<h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
-							Landing Pages
-						</h3>
-						<p className="text-gray-600 dark:text-gray-300 text-sm">
-							Create high-converting, professional landing pages to help
-							businesses grow online.
-						</p>
-					</div>
+							{/* Card description */}
+							<p className="text-gray-600 dark:text-gray-300 text-sm">{desc}</p>
+						</div>
+					))}
 				</div>
 			</div>
 		</section>

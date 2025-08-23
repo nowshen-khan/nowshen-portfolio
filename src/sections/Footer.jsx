@@ -1,9 +1,12 @@
 // Footer.jsx
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
-export default function Footer() {
+export default function Footer({ id }) {
 	return (
-		<footer className="bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 py-6 mt-10">
+		<footer
+			id={id}
+			className="bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 py-6 mt-10"
+		>
 			<div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
 				{/* Brand / Name */}
 				<div className="text-lg font-semibold mb-4 md:mb-0">

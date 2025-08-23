@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const TestimonialSection = () => {
+const Testimonials = ({ id }) => {
 	const [currentIndex, setCurrentIndex] = useState(0);
 
 	const testimonials = [
@@ -78,7 +78,10 @@ const TestimonialSection = () => {
 	};
 
 	return (
-		<section className="py-16 px-4 md:px-8 lg:px-16 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-900 dark:to-gray-800 transition-colors duration-500">
+		<section
+			id={id}
+			className="py-16 px-4 md:px-8 lg:px-16 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-900 dark:to-gray-800 transition-colors duration-500"
+		>
 			<div className="container mx-auto max-w-6xl">
 				{/* Header */}
 				<div className="text-center mb-16">
@@ -232,4 +235,4 @@ const TestimonialSection = () => {
 	);
 };
 
-export default TestimonialSection;
+export default Testimonials;
