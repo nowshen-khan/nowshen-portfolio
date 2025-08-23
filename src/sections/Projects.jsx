@@ -1,9 +1,7 @@
 // src/sections/Projects.jsx
 import { useState } from "react";
-import { useTheme } from "../hooks/useTheme";
-import { Github, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
-import { image } from "framer-motion/client";
 import Image from "../components/Image";
 
 // Project data
@@ -78,9 +76,6 @@ const allProjects = [
 ];
 
 export default function ProjectSection({ id }) {
-	const { theme } = useTheme();
-	const darkMode = theme === "dark";
-
 	const [visible, setVisible] = useState(6); // initially show 6 projects
 	const [selectedCategory, setSelectedCategory] = useState("All");
 
