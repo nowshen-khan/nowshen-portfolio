@@ -160,6 +160,8 @@ export default function ProjectSection({ id }) {
 								<div className="flex justify-between items-center mt-4">
 									<a
 										href={project.githubUrl}
+										target="_blank"
+										rel="noopener noreferrer"
 										className="flex items-center px-4 py-2 rounded-lg transition-colors dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-white bg-gray-200 hover:bg-gray-300 text-gray-800"
 									>
 										<FaGithub size={18} className="mr-2" />
@@ -167,6 +169,8 @@ export default function ProjectSection({ id }) {
 									</a>
 									<a
 										href={project.liveUrl}
+										target="_blank"
+										rel="noopener noreferrer"
 										className="flex items-center px-4 py-2 rounded-lg transition-colors dark:bg-blue-600 dark:hover:bg-blue-500 dark:text-white bg-blue-500 hover:bg-blue-400 text-white"
 									>
 										<ExternalLink size={18} className="mr-2" />
