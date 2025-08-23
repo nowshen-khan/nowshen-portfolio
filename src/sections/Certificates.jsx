@@ -1,5 +1,4 @@
 // src/sections/Certificates.jsx
-import { title } from "framer-motion/client";
 import { Award, BookOpen, GraduationCap } from "lucide-react";
 import { FaCertificate } from "react-icons/fa";
 
