@@ -1,23 +1,7 @@
 import Image from "./../components/Image";
 import { MapPin } from "lucide-react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { IoMdMail } from "react-icons/io";
+import SocialLinks from "../components/SocialLinks";
 export default function Hero({ id }) {
-	const socialLinks = [
-		{
-			icon: <FaGithub />,
-			href: "https://github.com/nowshen-khan",
-		},
-		{
-			icon: <FaLinkedin />,
-			href: "https://www.linkedin.com/in/nowshen-khan/",
-		},
-		{
-			icon: <IoMdMail />,
-			href: "mailto:contact@nowshen.com",
-		},
-	];
-
 	const scrollToContact = () => {
 		const element = document.getElementById("contact");
 		if (element) {
@@ -73,21 +57,7 @@ export default function Hero({ id }) {
 					</div>
 
 					{/* Social Icons */}
-					<div className="flex space-x-4 mt-4">
-						{socialLinks.map((link, index) => {
-							return (
-								<a
-									href={link.href}
-									key={index}
-									className="text-2xl hover:text-green-500 transition"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									{link.icon}
-								</a>
-							);
-						})}
-					</div>
+					<SocialLinks className="flex space-x-4 mt-4" />
 				</div>
 			</div>
 		</section>

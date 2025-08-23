@@ -1,5 +1,5 @@
 // Footer.jsx
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import SocialLinks from "../components/SocialLinks";
 
 export default function Footer({ id }) {
 	return (
@@ -14,32 +14,7 @@ export default function Footer({ id }) {
 				</div>
 
 				{/* Social Links */}
-				<div className="flex space-x-6 text-xl">
-					<a
-						href="https://github.com/nowshen-khan"
-						target="_blank"
-						rel="noopener noreferrer"
-						className="hover:text-gray-900 dark:hover:text-white transition"
-					>
-						<FaGithub />
-					</a>
-					<a
-						href="https://linkedin.com/in/nowshen-khan"
-						target="_blank"
-						rel="noopener noreferrer"
-						className="hover:text-gray-900 dark:hover:text-white transition"
-					>
-						<FaLinkedin />
-					</a>
-					<a
-						href="https://twitter.com/NowshenK"
-						target="_blank"
-						rel="noopener noreferrer"
-						className="hover:text-gray-900 dark:hover:text-white transition"
-					>
-						<FaTwitter />
-					</a>
-				</div>
+				<SocialLinks className="flex space-x-6 text-xl" />
 			</div>
 		</footer>
 	);

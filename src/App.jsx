@@ -19,9 +19,10 @@ function App() {
 				<Navbar />
 				<Hero id={"home"} />
 				<About id={"about"} />
+				<hr />
 				<Skills id={"skills"} />
 				<WhatICanDo id={"services"} />
-
+				<hr />
 				<Certificates id={"certificates"} />
 				<Experience id={"experience"} />
 				<Projects id={"projects"} />
