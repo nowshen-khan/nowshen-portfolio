@@ -75,7 +75,7 @@ const allProjects = [
 		category: "Web",
 		image: "/images/portfolio-project-about.png",
 		githubUrl: "https://github.com/nowshen-khan/nowshen-portfolio",
-		liveUrl: "#",
+		liveUrl: "https://nowshen.com/",
 		status: "live",
 	},
 	// More Project
