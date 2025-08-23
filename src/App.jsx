@@ -22,9 +22,10 @@ function App() {
 				<hr />
 				<Skills id={"skills"} />
 				<WhatICanDo id={"services"} />
+				<Experience id={"experience"} />
 				<hr />
 				<Certificates id={"certificates"} />
-				<Experience id={"experience"} />
+
 				<Projects id={"projects"} />
 				<Testimonials id={"testimonials"} />
 				<GetInTouch id={"contact"} />

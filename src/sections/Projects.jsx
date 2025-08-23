@@ -2,6 +2,9 @@
 import { useState } from "react";
 import { useTheme } from "../hooks/useTheme";
 import { Github, ExternalLink } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
+import { image } from "framer-motion/client";
+import Image from "../components/Image";
 
 // Project data
 const allProjects = [
@@ -12,6 +15,7 @@ const allProjects = [
 			"Full-featured online store with shopping cart, authentication, and payment processing.",
 		technologies: ["React", "Node.js", "MongoDB", "Stripe"],
 		category: "Web",
+		image: "/portfolio-project.png",
 		githubUrl: "#",
 		liveUrl: "#",
 	},
@@ -62,7 +66,8 @@ const allProjects = [
 			"Responsive portfolio with dark mode, project showcase, and contact form.",
 		technologies: ["React", "Tailwind CSS", "EmailJS", "Framer Motion"],
 		category: "Web",
-		githubUrl: "#",
+		image: "/portfolio-project-hero.png",
+		githubUrl: "https://github.com/nowshen-khan/nowshen-portfolio",
 		liveUrl: "#",
 	},
 	// More Project
@@ -132,9 +137,10 @@ export default function ProjectSection({ id }) {
 							key={project.id}
 							className={`rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-105 dark:bg-gray-800 bg-white`}
 						>
-							<div className="h-40 overflow-hidden flex items-center justify-center bg-gray-200 dark:bg-gray-700">
+							<div className="h-48 overflow-hidden flex items-center justify-center bg-gray-200 dark:bg-gray-700">
 								<span className="text-lg text-gray-500 dark:text-gray-300">
-									Project Image
+									<Image src={project.image} />
+									{/* <img src={project.image} alt={project.title} /> */}
 								</span>
 							</div>
 							<div className="p-4">
@@ -157,7 +163,7 @@ export default function ProjectSection({ id }) {
 										href={project.githubUrl}
 										className="flex items-center px-4 py-2 rounded-lg transition-colors dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-white bg-gray-200 hover:bg-gray-300 text-gray-800"
 									>
-										<Github size={18} className="mr-2" />
+										<FaGithub size={18} className="mr-2" />
 										Code
 									</a>
 									<a

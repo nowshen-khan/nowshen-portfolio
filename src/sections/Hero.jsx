@@ -12,7 +12,7 @@ export default function Hero({ id }) {
 	return (
 		<section
 			id={id}
-			className="text-foreground dark:text-foreground py-20 md:py-28"
+			className="xt-foreground dark:text-foreground py-20 md:py-28 dark:bg-gradient-to-b dark:from-[#0a0a0a] dark:via-[#0d0d2a] dark:to-[#000000] "
 		>
 			<div className="container mx-auto flex flex-col items-center justify-between px-6 lg:px-12 md:flex-row-reverse">
 				{/* Right Image */}
@@ -46,7 +46,14 @@ export default function Hero({ id }) {
 					</div>
 
 					{/* Call To Action Button */}
-					<div className="mt-6">
+					<div className="mt-6 flex gap-4">
+						<button
+							onClick={scrollToContact}
+							className="px-6 py-3 rounded-xl bg-green-600 hover:bg-green-700 
+                     transition shadow-lg font-medium"
+						>
+							View My Work
+						</button>
 						<button
 							onClick={scrollToContact}
 							className="px-6 py-3 bg-indigo-600 text-white font-semibold rounded-xl hover:bg-indigo-700 transition-colors duration-300"

@@ -1,33 +1,47 @@
 // src/sections/Certificates.jsx
+import { title } from "framer-motion/client";
 import { Award, BookOpen, GraduationCap } from "lucide-react";
+import { FaCertificate } from "react-icons/fa";
 
 // ✅ DRY approach: Certificates array
 const certificates = [
 	{
+		icon: FaCertificate, // course complete icon
+		title: "Certified Full Stack Developer Curriculum",
+		description:
+			"Master frontend & backend development with HTML, CSS, JS, React, Node.js, Python, and real-world projects to become a confident Full Stack Developer.",
+		colorClass: "text-green-500",
+		linkColor: "text-green-600 dark:text-green-400",
+		link: "https://www.freecodecamp.org/learn/full-stack-developer/",
+		assessment: "On going",
+	},
+	{
 		icon: Award,
-		title: "Web Development Bootcamp",
+		title: "Full Stack Web Development with MERN",
 		description:
 			"Completed MERN stack course covering frontend & backend development.",
 		colorClass: "text-indigo-500",
 		linkColor: "text-indigo-600 dark:text-indigo-400",
-		link: "#",
+		link: "https://ostad.app/share/certificate/c19962-nowshen-anjuman-khan-prapte",
+		assessment: "Score: 92%",
 	},
-	{
-		icon: BookOpen,
-		title: "JavaScript Mastery",
-		description: "Hands-on projects with modern ES6+, async JS, and APIs.",
-		colorClass: "text-green-500",
-		linkColor: "text-green-600 dark:text-green-400",
-		link: "#",
-	},
+	// {
+	// 	icon: BookOpen,
+	// 	title: "JavaScript Mastery",
+	// 	description: "Hands-on projects with modern ES6+, async JS, and APIs.",
+	// 	colorClass: "text-green-500",
+	// 	linkColor: "text-green-600 dark:text-green-400",
+	// 	link: "#",
+	// 	assessment: "",
+	// },
 	{
 		icon: GraduationCap,
 		title: "Responsive Web Design",
-		description:
-			"Learned HTML, CSS, Tailwind, and accessibility best practices.",
+		description: "Learned HTML, CSS, and accessibility best practices.",
 		colorClass: "text-pink-500",
 		linkColor: "text-pink-600 dark:text-pink-400",
-		link: "#",
+		link: "https://www.freecodecamp.org/certification/nowshen/responsive-web-design",
+		assessment: "Completed 100% of challenges.",
 	},
 ];
 
@@ -44,12 +58,20 @@ export default function Certificates({ id }) {
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 					{certificates.map(
 						(
-							{ icon: Icon, title, description, colorClass, linkColor, link },
+							{
+								icon: Icon,
+								title,
+								description,
+								colorClass,
+								linkColor,
+								link,
+								assessment,
+							},
 							index
 						) => (
 							<div
 								key={index}
-								className="p-6 rounded-2xl shadow-md bg-gray-50 dark:bg-gray-800 hover:shadow-xl transition"
+								className="p-6 rounded-2xl shadow-md bg-gray-50 dark:bg-gray-800 hover:shadow-xl hover:bg-indigo-50 dark:hover:bg-gray-700 transition"
 							>
 								{/* Certificate Icon */}
 								<Icon className={`w-12 h-12 mb-4 ${colorClass}`} />
@@ -63,6 +85,13 @@ export default function Certificates({ id }) {
 								<p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
 									{description}
 								</p>
+
+								{/* Optional Assessment */}
+								{assessment && (
+									<p className="text-gray-500 dark:text-gray-400 text-sm mb-2">
+										{assessment}
+									</p>
+								)}
 
 								{/* View Certificate Link */}
 								<a
