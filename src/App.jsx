@@ -17,18 +17,18 @@ function App() {
 		<ThemeProvider>
 			<BrowserRouter>
 				<Navbar />
-				<Hero id={"home"} />
-				<About id={"about"} />
+				<Hero id={"home"} className={"min-h-screen"} />
+				<About id={"about"} className={"min-h-screen"} />
 				<hr />
 				<Skills id={"skills"} />
 				<WhatICanDo id={"services"} />
 				<Experience id={"experience"} />
 				<hr />
 				<Certificates id={"certificates"} />
-				<Projects id={"projects"} />
+				<Projects id={"projects"} className={"min-h-screen"} />
 				{/* <Testimonials id={"testimonials"} /> */}
 				<hr />
-				<GetInTouch id={"contact"} />
+				<GetInTouch id={"contact"} className={"min-h-screen"} />
 				<Footer id={"footer"} />
 			</BrowserRouter>
 		</ThemeProvider>

@@ -1,10 +1,10 @@
 // About.jsx
 import Image from "../components/Image";
-export default function About({ id }) {
+export default function About({ id, className }) {
 	return (
 		<section
 			id={id}
-			className="p-8 py-20 rounded-lg grid md:grid-cols-2 items-center gap-8 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-900 dark:to-gray-800 transition-colors duration-500"
+			className={`${className} p-8 py-20 rounded-lg grid md:grid-cols-2 items-center gap-8 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-900 dark:to-gray-800 transition-colors duration-500 `}
 		>
 			{/* Left side - Image */}
 			<div className="flex justify-center">

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Testimonials = ({ id }) => {
+const Testimonials = ({ id, className }) => {
 	const [currentIndex, setCurrentIndex] = useState(0);
 
 	const testimonials = [
@@ -80,7 +80,7 @@ const Testimonials = ({ id }) => {
 	return (
 		<section
 			id={id}
-			className="py-16 px-4 md:px-8 lg:px-16 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-900 dark:to-gray-800 transition-colors duration-500"
+			className={`${className} py-16 px-4 md:px-8 lg:px-16 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-900 dark:to-gray-800 transition-colors duration-500 min-h-screen`}
 		>
 			<div className="container mx-auto max-w-6xl">
 				{/* Header */}

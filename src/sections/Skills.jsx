@@ -62,16 +62,16 @@ const skillCategories = {
 	},
 };
 
-export default function Skills({ id }) {
+export default function Skills({ id, className }) {
 	const { theme } = useTheme();
 
 	return (
 		<section
 			id={id}
-			className="py-20 px-8 rounded-lg
+			className={`${className} py-20 px-8 rounded-lg
                  bg-gradient-to-br from-blue-50 to-indigo-50 
                  dark:from-gray-900 dark:to-gray-800
-                 transition-colors duration-500"
+                 transition-colors duration-500`}
 		>
 			<h2 className="text-3xl font-bold mb-12 text-center">Skills</h2>
 

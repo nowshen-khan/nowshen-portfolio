@@ -24,9 +24,12 @@ const services = [
 	},
 ];
 
-export default function WhatICanDo({ id }) {
+export default function WhatICanDo({ id, className }) {
 	return (
-		<section id={id} className="py-20 bg-gray-50 dark:bg-gray-900">
+		<section
+			id={id}
+			className={`${className} py-20 bg-gray-50 dark:bg-gray-900`}
+		>
 			<div className="max-w-6xl mx-auto px-6 text-center">
 				{/* Section Title */}
 				<h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white">

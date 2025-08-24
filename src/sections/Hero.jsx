@@ -1,7 +1,7 @@
 import Image from "./../components/Image";
 import { MapPin } from "lucide-react";
 import SocialLinks from "../components/SocialLinks";
-export default function Hero({ id }) {
+export default function Hero({ id, className }) {
 	const projects = document.getElementById("projects");
 	const contact = document.getElementById("contact");
 	const scrollToSection = (section) => {
@@ -13,7 +13,7 @@ export default function Hero({ id }) {
 	return (
 		<section
 			id={id}
-			className="xt-foreground dark:text-foreground py-20 md:py-28 dark:bg-gradient-to-b dark:from-[#0a0a0a] dark:via-[#0d0d2a] dark:to-[#000000] "
+			className={`${className} xt-foreground dark:text-foreground py-20 md:py-28 dark:bg-gradient-to-b dark:from-[#0a0a0a] dark:via-[#0d0d2a] dark:to-[#000000] `}
 		>
 			<div className="container mx-auto flex flex-col items-center justify-between px-6 lg:px-12 md:flex-row-reverse">
 				{/* Right Image */}

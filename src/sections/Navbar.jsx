@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import DarkModeToggle from "../components/DarkModeToggle";
 import { Menu, X } from "lucide-react";
 
-export default function Navbar() {
+export default function Navbar(id, className) {
 	const menuItems = [
 		{ label: "About", href: "about" },
 		{ label: "Services", href: "services" },
@@ -51,7 +51,8 @@ export default function Navbar() {
 
 	return (
 		<nav
-			className={`
+			id={id}
+			className={`${className}
         fixed top-0 w-full z-50 transition-colors duration-300
         ${
 					scrolled

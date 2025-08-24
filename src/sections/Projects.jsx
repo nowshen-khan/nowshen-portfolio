@@ -81,7 +81,7 @@ const allProjects = [
 	// More Project
 ];
 
-export default function ProjectSection({ id }) {
+export default function Projects({ id, className }) {
 	const [visible, setVisible] = useState(6); // initially show 6 projects
 	const [selectedCategory, setSelectedCategory] = useState("All");
 
@@ -101,7 +101,7 @@ export default function ProjectSection({ id }) {
 	return (
 		<section
 			id={id}
-			className={`py-16 px-4 md:px-8 lg:px-16 transition-colors duration-300 bg-gray-50 text-gray-900 dark:bg-background dark:text-white`}
+			className={`${className} py-16 px-4 md:px-8 lg:px-16 transition-colors duration-300 bg-gray-50 text-gray-900 dark:bg-background dark:text-white`}
 		>
 			<div className="container mx-auto max-w-6xl">
 				{/* Header */}

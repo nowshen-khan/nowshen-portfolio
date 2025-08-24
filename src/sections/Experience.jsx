@@ -20,11 +20,11 @@ const experiences = [
 	},
 ];
 
-export default function Experience({ id }) {
+export default function Experience({ id, className }) {
 	return (
 		<section
 			id={id}
-			className="min-h-screen px-6 py-20 bg-gradient-to-t from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800 transition-colors duration-500"
+			className={`${className} px-6 py-20 bg-gradient-to-t from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800 transition-colors duration-500`}
 		>
 			<div className="max-w-5xl mx-auto">
 				<h2 className="text-4xl font-bold text-center mb-12">My Journey</h2>
