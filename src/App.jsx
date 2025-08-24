@@ -1,5 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "./context/ThemeProvider";
+import ThemeColorUpdater from "./components/ThemeColorUpdater";
 import Navbar from "./sections/Navbar";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
@@ -16,6 +17,7 @@ function App() {
 	return (
 		<ThemeProvider>
 			<BrowserRouter>
+				<ThemeColorUpdater />
 				<Navbar />
 				<Hero id={"home"} className={"min-h-screen"} />
 				<About id={"about"} className={"min-h-screen"} />
