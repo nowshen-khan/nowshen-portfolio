@@ -1,5 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import { ThemeProvider } from "./context/ThemeProvider";
+import SEO from "./components/SEO";
 import ThemeColorUpdater from "./components/ThemeColorUpdater";
 import Navbar from "./sections/Navbar";
 import Hero from "./sections/Hero";
@@ -17,21 +19,30 @@ function App() {
 	return (
 		<ThemeProvider>
 			<BrowserRouter>
-				<ThemeColorUpdater />
-				<Navbar />
-				<Hero id={"home"} className={"min-h-screen"} />
-				<About id={"about"} className={"min-h-screen"} />
-				<hr />
-				<Skills id={"skills"} />
-				<WhatICanDo id={"services"} />
-				<Experience id={"experience"} />
-				<hr />
-				<Certificates id={"certificates"} />
-				<Projects id={"projects"} className={"min-h-screen"} />
-				{/* <Testimonials id={"testimonials"} /> */}
-				<hr />
-				<GetInTouch id={"contact"} className={"min-h-screen"} />
-				<Footer id={"footer"} />
+				<HelmetProvider>
+					<SEO
+						title="Nowshen Anjuman | MERN Stack Developer Portfolio"
+						description="Hi, I'm Nowshen — a passionate MERN Stack Developer. I build modern, responsive, and user-friendly web applications that solve real-world problems."
+						keywords="Nowshen, MERN Stack, React Developer, Node.js, MongoDB, Express, Portfolio, Web Developer Bangladesh"
+						url="https://nowshen.com"
+					/>
+
+					<ThemeColorUpdater />
+					<Navbar />
+					<Hero id={"home"} className={"min-h-screen"} />
+					<About id={"about"} className={"min-h-screen"} />
+					<hr />
+					<Skills id={"skills"} />
+					<WhatICanDo id={"services"} />
+					<Experience id={"experience"} />
+					<hr />
+					<Certificates id={"certificates"} />
+					<Projects id={"projects"} className={"min-h-screen"} />
+					{/* <Testimonials id={"testimonials"} /> */}
+					<hr />
+					<GetInTouch id={"contact"} className={"min-h-screen"} />
+					<Footer id={"footer"} />
+				</HelmetProvider>
 			</BrowserRouter>
 		</ThemeProvider>
 	);
