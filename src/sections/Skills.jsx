@@ -21,6 +21,7 @@ import {
 	SiWoocommerce,
 	SiPostman,
 	SiCpanel,
+	SiGithubpages,
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 
@@ -93,6 +94,7 @@ const skillCategories = {
 			{ icon: SiVercel, label: "Vercel" },
 			{ icon: SiNetlify, label: "Netlify" },
 			{ icon: SiCpanel, label: "cPanel" },
+			{ icon: SiGithubpages, label: "GitHub Pages" },
 		],
 	},
 };
