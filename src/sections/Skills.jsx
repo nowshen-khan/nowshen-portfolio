@@ -2,6 +2,7 @@
 import { useTheme } from "../hooks/useTheme";
 import {
 	SiJavascript,
+	SiTypescript,
 	SiReact,
 	SiNextdotjs,
 	SiNodedotjs,
@@ -13,13 +14,24 @@ import {
 	SiMongoose,
 	SiGit,
 	SiGithub,
+	SiWordpress,
+	SiElementor,
+	SiVercel,
+	SiNetlify,
+	SiWoocommerce,
+	SiPostman,
+	SiCpanel,
 } from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
 
 const skillCategories = {
 	Languages: {
 		colorLight: "text-yellow-400",
 		colorDark: "text-yellow-300",
-		skills: [{ icon: SiJavascript, label: "JavaScript" }],
+		skills: [
+			{ icon: SiJavascript, label: "JavaScript" },
+			{ icon: SiTypescript, label: "TypeScript" },
+		],
 	},
 	Frontend: {
 		colorLight: "text-cyan-500",
@@ -48,16 +60,39 @@ const skillCategories = {
 	Database: {
 		colorLight: "text-orange-500",
 		colorDark: "text-orange-400",
-		skills: [{ icon: SiMongodb, label: "MongoDB" }],
+		skills: [
+			{ icon: SiMongodb, label: "MongoDB" },
+			{ icon: SiMongoose, label: "Mongoose" },
+		],
+	},
+	CMS: {
+		colorLight: "text-blue-600",
+		colorDark: "text-blue-400",
+		skills: [
+			{ icon: SiWordpress, label: "WordPress" },
+			{ icon: SiElementor, label: "Elementor (Page Builder)" },
+			{ icon: SiWoocommerce, label: "WooCommerce" },
+		],
 	},
 	Tools: {
 		colorLight: "text-gray-500",
 		colorDark: "text-gray-400",
 		skills: [
-			{ icon: SiMongoose, label: "Mongoose" },
+			{ icon: VscVscode, label: "VS Code" },
+
+			{ icon: SiPostman, label: "Postman" },
 			{ icon: SiGit, label: "Git" },
 			{ icon: SiGithub, label: "Github" },
 			{ icon: SiFigma, label: "Figma" },
+		],
+	},
+	Deployment: {
+		colorLight: "text-pink-500",
+		colorDark: "text-pink-400",
+		skills: [
+			{ icon: SiVercel, label: "Vercel" },
+			{ icon: SiNetlify, label: "Netlify" },
+			{ icon: SiCpanel, label: "cPanel" },
 		],
 	},
 };
