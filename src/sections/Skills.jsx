@@ -87,8 +87,8 @@ const skillCategories = {
 		],
 	},
 	Deployment: {
-		colorLight: "text-pink-500",
-		colorDark: "text-pink-400",
+		colorLight: "text-dark-500",
+		colorDark: "text-dark-400",
 		skills: [
 			{ icon: SiVercel, label: "Vercel" },
 			{ icon: SiNetlify, label: "Netlify" },
