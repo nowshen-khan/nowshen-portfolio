@@ -73,7 +73,7 @@ const allProjects = [
 			"Responsive portfolio with dark mode, project showcase, and contact form.",
 		technologies: ["React", "Tailwind CSS", "Formspree", "Framer Motion"],
 		category: "Web",
-		image: "/images/nowshen-portfolio-copy.png",
+		image: "/images/nowshen-p.png",
 		githubUrl: "https://github.com/nowshen-khan/nowshen-portfolio",
 		liveUrl: "https://nowshen.com/",
 		status: "live",
