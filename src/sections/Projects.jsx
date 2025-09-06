@@ -56,18 +56,6 @@ const allProjects = [
 	},
 	{
 		id: 5,
-		title: "Fitness Tracker",
-		description:
-			"Workout and nutrition tracking with progress charts and recommendations.",
-		technologies: ["React Native", "GraphQL", "MongoDB", "Chart.js"],
-		category: "Mobile",
-		image: "/images/projects.png",
-		githubUrl: "#",
-		liveUrl: "#",
-		status: "coming-soon",
-	},
-	{
-		id: 6,
 		title: "Portfolio Website",
 		description:
 			"Responsive portfolio with dark mode, project showcase, and contact form.",
@@ -79,7 +67,7 @@ const allProjects = [
 		status: "live",
 	},
 	{
-		id: 7,
+		id: 6,
 		title: "Matrix Calculator",
 		description:
 			"A fully responsive web-based Matrix Calculator built using Next.js and Tailwind CSS. This tool allows users to perform essential matrix operations with an intuitive and interactive UI. The app is designed for users in education, engineering, and mathematics who frequently work with matrices.",
@@ -88,6 +76,30 @@ const allProjects = [
 		image: "/images/matrix-calculator.png",
 		githubUrl: "https://github.com/nowshen-khan/matrix-calculator",
 		liveUrl: "https://nowshen-khan.github.io/matrix-calculator/",
+		status: "live",
+	},
+	{
+		id: 7,
+		title: "Simple Task Management App",
+		description:
+			"A responsive web application designed to streamline task organization and enhance productivity. Users can create, edit, and delete tasks.",
+		technologies: ["Vue.js"],
+		category: "Web",
+		image: "/images/simple-task-manager.png",
+		githubUrl: "https://github.com/nowshen-khan/task-management-app",
+		liveUrl: "https://nowshen-khan.github.io/task-management-app/",
+		status: "live",
+	},
+	{
+		id: 8,
+		title: "LearnWishBD Educational Platform",
+		description:
+			"LearnWishBD is a user-friendly educational blog platform designed to support learners across various academic levels, from Class 6 to university. It offers a range of articles, study tips, and resources to enhance the learning experience.",
+		technologies: ["HTML", "CSS", "JavaScript"],
+		category: "Web",
+		image: "/images/learnwish.png",
+		githubUrl: "https://github.com/nowshen-khan/learnwish.en",
+		liveUrl: "https://nowshen-khan.github.io/learnwish.en/",
 		status: "live",
 	},
 	// More Project
