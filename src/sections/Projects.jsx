@@ -73,9 +73,21 @@ const allProjects = [
 			"Responsive portfolio with dark mode, project showcase, and contact form.",
 		technologies: ["React", "Tailwind CSS", "Formspree", "Framer Motion"],
 		category: "Web",
-		image: "/images/portfolio-project-about.png",
+		image: "/images/nowshen-portfolio-copy.png",
 		githubUrl: "https://github.com/nowshen-khan/nowshen-portfolio",
 		liveUrl: "https://nowshen.com/",
+		status: "live",
+	},
+	{
+		id: 7,
+		title: "Matrix Calculator",
+		description:
+			"A fully responsive web-based Matrix Calculator built using Next.js and Tailwind CSS. This tool allows users to perform essential matrix operations with an intuitive and interactive UI. The app is designed for users in education, engineering, and mathematics who frequently work with matrices.",
+		technologies: ["Next.js", "Tailwind CSS"],
+		category: "Web",
+		image: "/images/matrix-calculator.png",
+		githubUrl: "https://github.com/nowshen-khan/matrix-calculator",
+		liveUrl: "https://nowshen-khan.github.io/matrix-calculator/",
 		status: "live",
 	},
 	// More Project
