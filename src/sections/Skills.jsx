@@ -2,7 +2,6 @@
 import { useTheme } from "../hooks/useTheme";
 import {
 	SiJavascript,
-	SiTypescript,
 	SiReact,
 	SiNextdotjs,
 	SiNodedotjs,
@@ -29,10 +28,7 @@ const skillCategories = {
 	Languages: {
 		colorLight: "text-yellow-400",
 		colorDark: "text-yellow-300",
-		skills: [
-			{ icon: SiJavascript, label: "JavaScript" },
-			{ icon: SiTypescript, label: "TypeScript" },
-		],
+		skills: [{ icon: SiJavascript, label: "JavaScript" }],
 	},
 	Frontend: {
 		colorLight: "text-cyan-500",
