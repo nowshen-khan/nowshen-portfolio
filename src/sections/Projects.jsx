@@ -11,9 +11,14 @@ const allProjects = [
 		title: "E-Commerce Platform",
 		description:
 			"Full-featured online store with shopping cart, authentication, and payment processing.",
-		technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+		technologies: [
+			"Wordpress",
+			"Woostify Theme",
+			"Elementor (Page Builder)",
+			"WooCommerce",
+		],
 		category: "Web",
-		image: "/images/projects.png",
+		image: "/images/couchly.png",
 		githubUrl: "#",
 		liveUrl: "#",
 		status: "coming-soon",
