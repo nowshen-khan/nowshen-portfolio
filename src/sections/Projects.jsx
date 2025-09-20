@@ -17,7 +17,7 @@ const allProjects = [
 			"Elementor (Page Builder)",
 			"WooCommerce",
 		],
-		category: "Web",
+		category: "WordPress",
 		image: "/images/couchly.png",
 		githubUrl: null,
 		liveUrl: null,
@@ -52,7 +52,7 @@ const allProjects = [
 		description:
 			"Community platform with posts, comments, likes, and real-time notifications.",
 		technologies: ["React", "Express", "Socket.io", "MySQL"],
-		category: "Fullstack",
+		category: "Web",
 		image: "/images/projects.png",
 		githubUrl: null,
 		liveUrl: null,
@@ -113,18 +113,19 @@ export default function Projects({ id, className }) {
 	const [visible, setVisible] = useState(6); // initially show 6 projects
 	const [selectedCategory, setSelectedCategory] = useState("All");
 
-	// Filter projects by category
-	const filteredProjects = allProjects.filter(
-		(p) => selectedCategory === "All" || p.category === selectedCategory
-	);
-
-	// Slice visible projects
-	const projectsToShow = filteredProjects.slice(0, visible);
-
 	// Handle Load More
 	const handleLoadMore = () => setVisible((prev) => prev + 6);
 
-	const categories = ["All", "Web", "Fullstack", "Mobile"];
+	const categories = ["All", "Web", "WordPress", "Show Live Only"];
+	// Filter projects by category
+	const filteredProjects = allProjects.filter(
+		(p) =>
+			selectedCategory === "All" ||
+			(p.status === "live" && selectedCategory === "Show Live Only") ||
+			p.category === selectedCategory
+	);
+	// Slice visible projects
+	const projectsToShow = filteredProjects.slice(0, visible);
 
 	return (
 		<section
