@@ -19,15 +19,14 @@ const allProjects = [
 		],
 		category: "Web",
 		image: "/images/couchly.png",
-		githubUrl: "#",
-		liveUrl: "#",
-		status: "live",
+		githubUrl: null,
+		liveUrl: null,
+		status: "offline",
 	},
 	{
 		id: 2,
 		title: "Inventory Management App",
-		description:
-			"A modern, secure, and user-friendly inventory management app that helps you track stock, manage suppliers, process orders, and generate real-time reports — all in one place.",
+		description: "Smart inventory tracking for growing businesses.",
 		technologies: ["React", "Tailwind CSS"],
 		category: "Web",
 		image: "/images/kanban.png",
@@ -43,8 +42,8 @@ const allProjects = [
 		technologies: ["React", "OpenWeather API", "Chart.js", "Geolocation"],
 		category: "Web",
 		image: "/images/projects.png",
-		githubUrl: "#",
-		liveUrl: "#",
+		githubUrl: null,
+		liveUrl: null,
 		status: "coming-soon",
 	},
 	{
@@ -55,8 +54,8 @@ const allProjects = [
 		technologies: ["React", "Express", "Socket.io", "MySQL"],
 		category: "Fullstack",
 		image: "/images/projects.png",
-		githubUrl: "#",
-		liveUrl: "#",
+		githubUrl: null,
+		liveUrl: null,
 		status: "coming-soon",
 	},
 	{
@@ -75,7 +74,7 @@ const allProjects = [
 		id: 6,
 		title: "Matrix Calculator",
 		description:
-			"A fully responsive web-based Matrix Calculator built using Next.js and Tailwind CSS. This tool allows users to perform essential matrix operations with an intuitive and interactive UI. The app is designed for users in education, engineering, and mathematics who frequently work with matrices.",
+			"A responsive Matrix Calculator built with Next.js and Tailwind CSS, offering essential matrix operations with a clean, interactive UI for students, engineers, and math enthusiasts.",
 		technologies: ["Next.js", "Tailwind CSS"],
 		category: "Web",
 		image: "/images/matrix-calculator.png",
@@ -171,14 +170,19 @@ export default function Projects({ id, className }) {
 							key={project.id}
 							className={`relative rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-105 dark:bg-gray-800 bg-white`}
 						>
-							{/* Coming Soon Ribbon */}
+							{/* Coming Soon / Offline Badge */}
 							{project.status === "coming-soon" && (
 								<div className="absolute top-3 right-0 bg-yellow-400 text-black px-3 py-1 rounded-l-lg font-semibold text-sm z-10">
 									Coming Soon
 								</div>
 							)}
+							{project.status === "offline" && (
+								<div className="absolute top-3 right-0 bg-red-400 text-white px-3 py-1 rounded-l-lg font-semibold text-sm z-10">
+									Offline
+								</div>
+							)}
 
-							{/* Project Image and Details */}
+							{/* Project Image */}
 							<div className="h-48 overflow-hidden flex items-center justify-center bg-gray-200 dark:bg-gray-700">
 								<span className="text-lg text-gray-500 dark:text-gray-300">
 									<Image src={project.image} alt={project.title} />
@@ -186,11 +190,14 @@ export default function Projects({ id, className }) {
 								</span>
 							</div>
 
+							{/* Project Details */}
 							<div className="p-4">
 								<h3 className="text-lg font-bold mb-2">{project.title}</h3>
 								<p className="mb-4 text-gray-600 dark:text-gray-300">
 									{project.description}
 								</p>
+
+								{/* Project Technologies */}
 								<div className="flex flex-wrap gap-2 mb-4">
 									{project.technologies.map((tech, index) => (
 										<span
@@ -201,39 +208,49 @@ export default function Projects({ id, className }) {
 										</span>
 									))}
 								</div>
+
+								{/* Action Buttons */}
 								<div className="flex justify-between items-center mt-4">
-									<a
-										href={project.githubUrl}
-										target="_blank"
-										rel="noopener noreferrer"
-										className={`flex items-center px-4 py-2 rounded-lg transition-colors ${
-											project.status === "coming-soon"
-												? "bg-gray-400 text-gray-700 cursor-not-allowed"
-												: "dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-white bg-gray-200 hover:bg-gray-300 text-gray-800"
-										}`}
-										onClick={(e) =>
-											project.status === "coming-soon" && e.preventDefault()
-										}
-									>
-										<FaGithub size={18} className="mr-2" />
-										Code
-									</a>
-									<a
-										href={project.liveUrl}
-										target="_blank"
-										rel="noopener noreferrer"
-										className={`flex items-center px-4 py-2 rounded-lg transition-colors ${
-											project.status === "coming-soon"
-												? "bg-indigo-300 text-gray-700 cursor-not-allowed"
-												: "dark:bg-blue-600 dark:hover:bg-blue-500 dark:text-white bg-blue-500 hover:bg-blue-400 text-white"
-										}`}
-										onClick={(e) =>
-											project.status === "coming-soon" && e.preventDefault()
-										}
-									>
-										<ExternalLink size={18} className="mr-2" />
-										Live Demo
-									</a>
+									{/* Render GitHub button only if available */}
+									{project.githubUrl && (
+										<a
+											href={project.githubUrl}
+											target="_blank"
+											rel="noopener noreferrer"
+											className={`flex items-center px-4 py-2 rounded-lg transition-colors ${
+												project.status === "coming-soon"
+													? "bg-gray-400 text-gray-700 cursor-not-allowed"
+													: "dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-white bg-gray-200 hover:bg-gray-300 text-gray-800"
+											}`}
+											onClick={(e) =>
+												project.status === "coming-soon" && e.preventDefault()
+											}
+										>
+											<FaGithub size={18} className="mr-2" />
+											Code
+										</a>
+									)}
+
+									{/* Render Live Demo button only if available */}
+
+									{project.liveUrl && (
+										<a
+											href={project.liveUrl}
+											target="_blank"
+											rel="noopener noreferrer"
+											className={`flex items-center px-4 py-2 rounded-lg transition-colors ${
+												project.status === "coming-soon"
+													? "bg-indigo-300 text-gray-700 cursor-not-allowed"
+													: "dark:bg-blue-600 dark:hover:bg-blue-500 dark:text-white bg-blue-500 hover:bg-blue-400 text-white"
+											}`}
+											onClick={(e) =>
+												project.status === "coming-soon" && e.preventDefault()
+											}
+										>
+											<ExternalLink size={18} className="mr-2" />
+											Live Demo
+										</a>
+									)}
 								</div>
 							</div>
 						</div>
