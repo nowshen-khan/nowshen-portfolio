@@ -94,14 +94,14 @@ export default function Navbar(id, className) {
 				<div className="flex items-center space-x-4">
 					<DarkModeToggle />
 
-					{/* Download CV */}
+					{/* Download Resume */}
 					<a
-						href="/nowshenCV.pdf"
+						href="/nowshenResume.pdf"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="px-4 py-2 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white dark:bg-indigo-500 dark:hover:bg-indigo-400  duration-300"
 					>
-						Download CV
+						Download Resume
 					</a>
 
 					{/* Mobile Menu Button */}
