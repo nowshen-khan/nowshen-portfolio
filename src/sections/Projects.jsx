@@ -36,13 +36,12 @@ const allProjects = [
 	},
 	{
 		id: 3,
-		title: "Weather Dashboard",
-		description:
-			"Real-time weather application with forecasts, maps, and location services.",
-		technologies: ["React", "OpenWeather API", "Chart.js", "Geolocation"],
+		title: "Todo App",
+		description: "Organize tasks with priority, pin & drag-and-drop ease.",
+		technologies: ["Next.js", "Tailwindcss", "Prisma", "MongoDB"],
 		category: "Web",
 		image: "/images/projects.png",
-		githubUrl: null,
+		githubUrl: "https://github.com/nowshen-khan/todo-app",
 		liveUrl: null,
 		status: "coming-soon",
 	},
