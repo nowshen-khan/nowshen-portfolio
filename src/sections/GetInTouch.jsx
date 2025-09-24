@@ -1,9 +1,9 @@
-// src/sections/GetInTouch.jsx
-"use client";
+import { forwardRef } from "react";
 
-export default function GetInTouch({ id, className }) {
+const GetInTouch = forwardRef(({ id, className }, ref) => {
 	return (
 		<section
+			ref={ref}
 			id={id}
 			className={`${className} flex items-center justify-center bg-background text-foreground px-6 py-20`}
 		>
@@ -15,7 +15,7 @@ export default function GetInTouch({ id, className }) {
 				</p>
 
 				<form
-					action="https://formspree.io/f/xovlgnpb" // <-- এখানে formspree endpoint দিয়েছি
+					action="https://formspree.io/f/xovlgnpb" // <-- আপনার Formspree endpoint
 					method="POST"
 					className="space-y-6"
 				>
@@ -59,4 +59,6 @@ export default function GetInTouch({ id, className }) {
 			</div>
 		</section>
 	);
-}
+});
+
+export default GetInTouch;

@@ -1,15 +1,13 @@
 import Image from "./../components/Image";
 import { MapPin } from "lucide-react";
 import SocialLinks from "../components/SocialLinks";
-export default function Hero({ id, className }) {
-	const projects = document.getElementById("projects");
-	const contact = document.getElementById("contact");
-	const scrollToSection = (section) => {
-		if (section) {
-			section.scrollIntoView({ behavior: "smooth" });
-		}
-	};
-
+export default function Hero({
+	id,
+	className,
+	scrollToSection,
+	projectsRef,
+	contactRef,
+}) {
 	return (
 		<section
 			id={id}
@@ -49,14 +47,14 @@ export default function Hero({ id, className }) {
 					{/* Call To Action Button */}
 					<div className="mt-6 flex gap-4">
 						<button
-							onClick={() => scrollToSection(projects)}
+							onClick={() => scrollToSection(projectsRef)}
 							className="px-6 py-3 rounded-xl bg-green-600 hover:bg-green-700 
                      transition shadow-lg font-medium"
 						>
 							View My Work
 						</button>
 						<button
-							onClick={() => scrollToSection(contact)}
+							onClick={() => scrollToSection(contactRef)}
 							className="px-6 py-3 bg-indigo-600 text-white font-semibold rounded-xl hover:bg-indigo-700 transition-colors duration-300"
 						>
 							Hire Me

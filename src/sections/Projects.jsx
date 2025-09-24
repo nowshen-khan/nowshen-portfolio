@@ -3,6 +3,7 @@ import { useState } from "react";
 import { ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import Image from "../components/Image";
+import { forwardRef } from "react";
 
 // Project data
 const allProjects = [
@@ -108,7 +109,7 @@ const allProjects = [
 	// More Project
 ];
 
-export default function Projects({ id, className }) {
+const Projects = forwardRef(({ id, className }, ref) => {
 	const [visible, setVisible] = useState(6); // initially show 6 projects
 	const [selectedCategory, setSelectedCategory] = useState("All");
 
@@ -128,6 +129,7 @@ export default function Projects({ id, className }) {
 
 	return (
 		<section
+			ref={ref}
 			id={id}
 			className={`${className} py-16 px-4 md:px-8 lg:px-16 transition-colors duration-300 bg-gray-50 text-gray-900 dark:bg-background dark:text-white`}
 		>
@@ -271,4 +273,6 @@ export default function Projects({ id, className }) {
 			</div>
 		</section>
 	);
-}
+});
+
+export default Projects;
