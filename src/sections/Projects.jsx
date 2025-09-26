@@ -33,18 +33,18 @@ const allProjects = [
 		image: "/images/kanban.png",
 		githubUrl: "https://github.com/nowshen-khan/kanban",
 		liveUrl: "https://nowshen-kanban.vercel.app/",
-		status: "live",
+		status: "coming-soon",
 	},
 	{
 		id: 3,
 		title: "Todo App",
 		description: "Organize tasks with priority, pin & drag-and-drop ease.",
-		technologies: ["Next.js", "Tailwindcss", "Prisma", "MongoDB"],
+		technologies: ["Next.js", "TypeScript", "Tailwindcss", "Prisma", "MongoDB"],
 		category: "Web",
-		image: "/images/projects.png",
+		image: "/images/todo-app.png",
 		githubUrl: "https://github.com/nowshen-khan/todo-app",
 		liveUrl: null,
-		status: "coming-soon",
+		status: "offline",
 	},
 	{
 		id: 4,
@@ -220,13 +220,14 @@ const Projects = forwardRef(({ id, className }, ref) => {
 											target="_blank"
 											rel="noopener noreferrer"
 											className={`flex items-center px-4 py-2 rounded-lg transition-colors ${
-												project.status === "coming-soon"
-													? "bg-gray-400 text-gray-700 cursor-not-allowed"
-													: "dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-white bg-gray-200 hover:bg-gray-300 text-gray-800"
+												// project.status === "coming-soon"
+												// 	? "bg-gray-400 text-gray-700 cursor-not-allowed"
+												// :
+												"dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-white bg-gray-200 hover:bg-gray-300 text-gray-800"
 											}`}
-											onClick={(e) =>
-												project.status === "coming-soon" && e.preventDefault()
-											}
+											// onClick={(e) =>
+											// 	project.status === "coming-soon" && e.preventDefault()
+											// }
 										>
 											<FaGithub size={18} className="mr-2" />
 											Code
@@ -241,13 +242,13 @@ const Projects = forwardRef(({ id, className }, ref) => {
 											target="_blank"
 											rel="noopener noreferrer"
 											className={`flex items-center px-4 py-2 rounded-lg transition-colors ${
-												project.status === "coming-soon"
-													? "bg-indigo-300 text-gray-700 cursor-not-allowed"
-													: "dark:bg-blue-600 dark:hover:bg-blue-500 dark:text-white bg-blue-500 hover:bg-blue-400 text-white"
+												// project.status === "coming-soon"
+												// ? "bg-indigo-300 text-gray-700 cursor-not-allowed" :
+												"dark:bg-blue-600 dark:hover:bg-blue-500 dark:text-white bg-blue-500 hover:bg-blue-400 text-white"
 											}`}
-											onClick={(e) =>
-												project.status === "coming-soon" && e.preventDefault()
-											}
+											// onClick={(e) =>
+											// 	project.status === "coming-soon" && e.preventDefault()
+											// }
 										>
 											<ExternalLink size={18} className="mr-2" />
 											Live Demo
