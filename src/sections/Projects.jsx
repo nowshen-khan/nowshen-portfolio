@@ -28,7 +28,7 @@ const allProjects = [
 		id: 2,
 		title: "Inventory Management App",
 		description: "Smart inventory tracking for growing businesses.",
-		technologies: ["React", "Tailwind CSS"],
+		technologies: ["React", "Tailwind CSS", "Express", "Mongoose", "MongoDB"],
 		category: "Web",
 		image: "/images/kanban.png",
 		githubUrl: "https://github.com/nowshen-khan/kanban",
