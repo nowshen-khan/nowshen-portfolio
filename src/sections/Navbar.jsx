@@ -7,6 +7,7 @@ export default function Navbar(id, className) {
 		{ label: "About", href: "about" },
 		{ label: "Services", href: "services" },
 		{ label: "Projects", href: "projects" },
+		{ label: "Blogs", href: "https://blog.nowshen.com/" },
 		//{ label: "Testimonials", href: "testimonials" },
 		{ label: "Contact", href: "contact" },
 	];
@@ -72,22 +73,37 @@ export default function Navbar(id, className) {
 
 				{/* Desktop Menu */}
 				<div className="hidden md:flex items-center space-x-8">
-					{menuItems.map((item) => (
-						<button
-							key={item.label}
-							onClick={() => handleScroll(item.href)}
-							className={`
-                transition-colors duration-300
-                ${
-									activeSection === item.href
-										? "text-indigo-600 font-semibold"
-										: "text-foreground hover:text-indigo-500"
-								}
-              `}
-						>
-							{item.label}
-						</button>
-					))}
+					{menuItems.map((item) =>
+						item.href.startsWith("http") ? (
+							// 🌐 External link
+							<a
+								key={item.label}
+								href={item.href}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="block w-full text-left md:w-auto md:inline-block
+                 transition-colors duration-300
+                 text-foreground hover:text-indigo-500"
+							>
+								{item.label}
+							</a>
+						) : (
+							// 🔗 Internal scroll
+							<button
+								key={item.label}
+								onClick={() => handleScroll(item.href)}
+								className={`block w-full text-left md:w-auto md:inline-block
+                 transition-colors duration-300
+                 ${
+										activeSection === item.href
+											? "text-indigo-600 font-semibold"
+											: "text-foreground hover:text-indigo-500"
+									}`}
+							>
+								{item.label}
+							</button>
+						)
+					)}
 				</div>
 
 				{/* Right Side */}
@@ -117,22 +133,37 @@ export default function Navbar(id, className) {
 			{/* Mobile Dropdown Menu */}
 			{isOpen && (
 				<div className="md:hidden bg-background shadow-md px-6 py-4 space-y-4 transition-colors duration-300">
-					{menuItems.map((item) => (
-						<button
-							key={item.label}
-							onClick={() => handleScroll(item.href)}
-							className={`
-                block w-full text-left transition-colors duration-300
-                ${
-									activeSection === item.href
-										? "text-indigo-600 font-semibold"
-										: "text-foreground hover:text-indigo-500"
-								}
-              `}
-						>
-							{item.label}
-						</button>
-					))}
+					{menuItems.map((item) =>
+						item.href.startsWith("http") ? (
+							// 🌐 External link
+							<a
+								key={item.label}
+								href={item.href}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="block w-full text-left md:w-auto md:inline-block
+                 transition-colors duration-300
+                 text-foreground hover:text-indigo-500"
+							>
+								{item.label}
+							</a>
+						) : (
+							// 🔗 Internal scroll
+							<button
+								key={item.label}
+								onClick={() => handleScroll(item.href)}
+								className={`block w-full text-left md:w-auto md:inline-block
+                 transition-colors duration-300
+                 ${
+										activeSection === item.href
+											? "text-indigo-600 font-semibold"
+											: "text-foreground hover:text-indigo-500"
+									}`}
+							>
+								{item.label}
+							</button>
+						)
+					)}
 				</div>
 			)}
 		</nav>

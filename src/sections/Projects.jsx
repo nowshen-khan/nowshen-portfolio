@@ -8,6 +8,24 @@ import { forwardRef } from "react";
 // Project data
 const allProjects = [
 	{
+		id: 0,
+		title: "Blog Platform",
+		description:
+			"A personal tech blog where I share my thoughts, experiments, and learnings about web development, coding, and modern technologies. Built with Next.js and Tailwind CSS.",
+		technologies: [
+			"Next.js",
+			"TypeScript",
+			"Tailwind CSS",
+			"MongoDB",
+			"BetterAuth",
+		],
+		category: "Web",
+		image: "/images/nowshen-blog.png",
+		githubUrl: "https://github.com/nowshen-khan/nowshen-blog",
+		liveUrl: "https://blog.nowshen.com/",
+		status: "coming-soon",
+	},
+	{
 		id: 1,
 		title: "E-Commerce Platform",
 		description:
