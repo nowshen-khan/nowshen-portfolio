@@ -30,7 +30,7 @@ export default function Hero({
 						Hi, I&#39;m Nowshen Anjuman Khan <span className="wave">👋</span>
 					</h1>
 					<p className="text-lg md:text-xl">
-						I&#39;m a full stack developer (React.js & Node.js) with a focus on
+						I&#39;m a full stack developer (Next.js & Node.js) with a focus on
 						creating exceptional digital experiences that are fast, accessible,
 						visually appealing, and responsive.
 					</p>

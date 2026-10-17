@@ -2,13 +2,17 @@
 import { useTheme } from "../hooks/useTheme";
 import {
 	SiJavascript,
+	SiTypescript,
 	SiReact,
 	SiNextdotjs,
+	SiNestjs,
 	SiNodedotjs,
 	SiExpress,
+	SiFastify,
 	SiTailwindcss,
 	SiBootstrap,
 	SiFigma,
+	SiPostgresql,
 	SiMongodb,
 	SiMongoose,
 	SiGit,
@@ -21,6 +25,9 @@ import {
 	SiPostman,
 	SiCpanel,
 	SiGithubpages,
+	SiPrisma,
+	SiSupabase,
+	SiNeon, 
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 
@@ -28,14 +35,19 @@ const skillCategories = {
 	Languages: {
 		colorLight: "text-yellow-400",
 		colorDark: "text-yellow-300",
-		skills: [{ icon: SiJavascript, label: "JavaScript" }],
+		skills: [
+			{ icon: SiJavascript, label: "JavaScript" },
+			{ icon: SiTypescript, label: "TypeScript" }
+		],
 	},
-	Frontend: {
+	"Frontend & UI": {
 		colorLight: "text-cyan-500",
 		colorDark: "text-cyan-400",
 		skills: [
-			{ icon: SiReact, label: "React" },
 			{ icon: SiNextdotjs, label: "Next.js" },
+			{ icon: SiReact, label: "React.js" },
+			{ icon: SiTailwindcss, label: "TailwindCSS" },
+			{ icon: SiBootstrap, label: "Bootstrap" },
 		],
 	},
 	Backend: {
@@ -43,49 +55,46 @@ const skillCategories = {
 		colorDark: "text-green-400",
 		skills: [
 			{ icon: SiNodedotjs, label: "Node.js" },
-			{ icon: SiExpress, label: "Express.js" },
+			{ icon: SiNestjs, label: "Nestjs" },			
+			{ icon: SiExpress, label: "Express" },
+			{ icon: SiFastify , label: "Fastify" },
 		],
 	},
-	"CSS / UI": {
-		colorLight: "text-purple-500",
-		colorDark: "text-purple-400",
-		skills: [
-			{ icon: SiTailwindcss, label: "TailwindCSS" },
-			{ icon: SiBootstrap, label: "Bootstrap" },
-		],
-	},
-	Database: {
+	"Database & Backend Services": {
 		colorLight: "text-orange-500",
 		colorDark: "text-orange-400",
 		skills: [
+			{ icon: SiPostgresql, label: "PostgreSQL" },
 			{ icon: SiMongodb, label: "MongoDB" },
+			{ icon: SiPrisma, label: "Prisma" },
 			{ icon: SiMongoose, label: "Mongoose" },
+			{ icon: SiSupabase, label: "Supabase" },
+			{ icon: SiNeon, label: "Neon" },
 		],
 	},
-	CMS: {
+	"CMS & E-commerce": {
 		colorLight: "text-blue-600",
 		colorDark: "text-blue-400",
 		skills: [
 			{ icon: SiWordpress, label: "WordPress" },
-			{ icon: SiElementor, label: "Elementor (Page Builder)" },
+			{ icon: SiElementor, label: "Elementor" },
 			{ icon: SiWoocommerce, label: "WooCommerce" },
 		],
 	},
-	Tools: {
+	"Tools & Design": {
 		colorLight: "text-gray-500",
 		colorDark: "text-gray-400",
 		skills: [
 			{ icon: VscVscode, label: "VS Code" },
-
 			{ icon: SiPostman, label: "Postman" },
 			{ icon: SiGit, label: "Git" },
 			{ icon: SiGithub, label: "Github" },
 			{ icon: SiFigma, label: "Figma" },
 		],
 	},
-	Deployment: {
-		colorLight: "text-dark-500",
-		colorDark: "text-dark-400",
+	"Deployment & Hosting": {
+		colorLight: "text-dark-700",
+		colorDark: "text-dark-300",
 		skills: [
 			{ icon: SiVercel, label: "Vercel" },
 			{ icon: SiNetlify, label: "Netlify" },
@@ -118,7 +127,7 @@ export default function Skills({ id, className }) {
 							<h3 className="text-lg font-semibold mb-4 text-center">
 								{category}
 							</h3>
-							<div className="grid grid-cols-3 gap-4 justify-items-center">
+							<div className="grid grid-cols-3 gap-5 justify-items-center">
 								{skills.map(({ icon: Icon, label }) => (
 									<div
 										key={label}

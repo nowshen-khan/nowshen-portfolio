@@ -22,14 +22,14 @@ export default function About({ id, className }) {
 				</h2>
 
 				<p className="text-indigo-600 dark:text-indigo-400 mb-4">
-					MERN Stack Developer | Passionate Coder | Problem Solver
+					Full Stack Developer | Passionate Coder | Problem Solver
 				</p>
 				<p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
 					Hi, I’m{" "}
 					<span className="font-semibold text-indigo-600 dark:text-indigo-400">
 						Nowshen
 					</span>{" "}
-					— a passionate MERN Stack Developer. I love building modern,
+					— a passionate Full Stack Developer. I love building modern,
 					responsive, and user-friendly web applications that solve real-world
 					problems. My focus is on clean code, smooth UI/UX, and scalable
 					backend solutions.

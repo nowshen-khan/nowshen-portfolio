@@ -30,9 +30,9 @@ function App() {
 			<BrowserRouter>
 				<HelmetProvider>
 					<SEO
-						title="Nowshen Anjuman | MERN Stack Developer Portfolio"
-						description="Hi, I'm Nowshen — a passionate MERN Stack Developer. I build modern, responsive, and user-friendly web applications that solve real-world problems."
-						keywords="Nowshen, MERN Stack, React Developer, Node.js, MongoDB, Express, Portfolio, Web Developer Bangladesh"
+						title="Nowshen Anjuman | Full Stack Developer Portfolio"
+						description="Hi, I'm Nowshen Anjuman — a passionate Full Stack Developer. I build modern, responsive, and user-friendly web applications that solve real-world problems."
+						keywords="Nowshen, Anjuman, Khan, Full Stack, MERN Stack, React Developer, Node.js, MongoDB, Express, Portfolio, Web Developer Bangladesh"
 						url="https://nowshen.com"
 					/>
 
